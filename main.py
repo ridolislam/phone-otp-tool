@@ -119,7 +119,7 @@ def load_phone_numbers(filename: str = "numbers.txt") -> List[str]:
 
 
 # ============================================================
-# OTP সেন্ড ফাংশন (HTTP প্রটোকল)
+# OTP সেন্ড ফাংশন (HTTP প্রটোকল) - আপডেটেড
 # ============================================================
 def send_otp_via_http(phone_number: str, email: str = "") -> Tuple[bool, str]:
     """
@@ -159,7 +159,7 @@ def send_otp_via_http(phone_number: str, email: str = "") -> Tuple[bool, str]:
         api_url = "https://auth.openai.com/api/accounts/authorize/continue"
         payload = {
             "username": {
-                "kind": "phone",
+                "kind": "phone_num",          # ✅ ফিক্স: 'phone' থেকে 'phone_num' করা হয়েছে
                 "value": phone_number
             },
             "screen_hint": "signup"
@@ -184,16 +184,15 @@ def send_otp_via_http(phone_number: str, email: str = "") -> Tuple[bool, str]:
             continue_url = data.get("continue_url", "")
             page_type = data.get("page", {}).get("type", "")
             
+            # চেক করুন ফোন OTP পেজে রিডাইরেক্ট করেছে কিনা
             if "phone" in str(page_type).lower() or "phone" in continue_url:
-                # ফোন OTP পেজে রিডাইরেক্ট করেছে
                 logger.info(f"✅ OTP সেন্ড হয়েছে: {phone_number}")
                 return True, f"OTP পাঠানো হয়েছে {phone_number} এ"
             else:
-                # অন্য পেজে রিডাইরেক্ট হয়েছে
                 logger.info(f"⚠️ অন্য পেজে রিডাইরেক্ট: {page_type}")
                 return False, f"রিডাইরেক্ট: {page_type}"
         else:
-            logger.warning(f"❌ API কল ফেল: {response.status_code} | {response.text[:100]}")
+            logger.warning(f"❌ API কল ফেল: {response.status_code} | {response.text[:200]}")
             return False, f"HTTP {response.status_code}"
 
     except Exception as e:
@@ -258,7 +257,7 @@ def main():
     """মেইন ফাংশন - ফোন নম্বর লিস্ট পড়ে প্রতিটি নম্বরে OTP সেন্ড করে"""
     
     print("\n" + "="*60)
-    print("📱 Phone Number Bulk OTP Tool v1.0")
+    print("📱 Phone Number Bulk OTP Tool v1.1")
     print("="*60)
     print("📋 ফোন নম্বর লিস্ট পড়া হচ্ছে...")
     
