@@ -1,0 +1,36 @@
+
+---
+
+### 📄 ফাইল ৬: `.gitignore`
+
+```txt
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+.venv/
+
+# আউটপুট ফাইল
+output/
+*.log
+*.json
+*.txt
+!numbers.txt
+!requirements.txt
+!config.yaml
+!README.md
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,196 @@
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+pythonenv*
+
+# Byte-compiled / optimized / DLL files
+*.pyc
+*.pyo
+*.pyd
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ============================================================
+# আউটপুট ফাইল (Output files)
+# ============================================================
+output/
+*.log
+*.txt
+!numbers.txt
+!requirements.txt
+!config.yaml
+!README.md
+*.json
+!package.json
+!tsconfig.json
+
+# ============================================================
+# IDE / Editor
+# ============================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ============================================================
+# OS Files
+# ============================================================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ============================================================
+# Jupyter Notebooks
+# ============================================================
+.ipynb_checkpoints/
+
+# ============================================================
+# Virtual Environment
+# ============================================================
+.venv
+venv/
+ENV/
+env/
+.env
+.venv/
+virtualenv/
+
+# ============================================================
+# Testing
+# ============================================================
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# ============================================================
+# 프로젝트 특정 (Project specific)
+# ============================================================
+# API Keys / Secrets
+*.key
+*.pem
+*.crt
+*.csr
+*.p12
+secrets.yaml
+.env.local
+.env.*.local
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# ============================================================
+# Database
+# ============================================================
+*.db
+*.sqlite
+*.sqlite3
+
+# ============================================================
+# Logs
+# ============================================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# ============================================================
+# macOS Specific
+# ============================================================
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# ============================================================
+# Linux Specific
+# ============================================================
+*~
+.directory
+*.part
+*.crdownload
+
+# ============================================================
+# Windows Specific
+# ============================================================
+$RECYCLE.BIN/
+*.lnk
+*.tmp
+*.cab
+*.msi
+*.msm
+*.msp
+
+# ============================================================
+# Others
+# ============================================================
+*.orig
+*.rej
+*.patch
+*.diff
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+*.patch
+*.diff
